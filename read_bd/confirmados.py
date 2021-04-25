@@ -1,7 +1,7 @@
 import pandas as pd
 import datetime as dt
 
-df_confirmados = pd.read_excel(r'.\datasets\CONFIRMADOS COVID 19 - 2020 - 2021.xlsx', sheet_name='CONFIRMADOS', header=4)
+df_confirmados = pd.read_excel('https://github.com/caiobuenoleite/testesite/blob/60474e970f1dd36a1384eb9c240ac6c3f0d2b0f2/datasets/CONFIRMADOS%20COVID%2019%20-%202020%20-%202021.xlsx', sheet_name='CONFIRMADOS', header=4)
 df_confirmados = df_confirmados.dropna(subset=['Nº'])
 
 df_confirmados['NOTIFICAÇÃO'] = pd.to_datetime(df_confirmados['NOTIFICAÇÃO'],errors='coerce',format='%Y-%m-%d %H:%M:%S')
